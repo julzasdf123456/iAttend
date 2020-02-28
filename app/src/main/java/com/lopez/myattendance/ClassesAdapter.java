@@ -102,6 +102,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
                     Intent intent = new Intent(context, Attendance.class);
                     intent.putExtra("TEACHER", classesList.get(position).getTeacherEmail());
                     intent.putExtra("SUBJECT", classesList.get(position).getSubjectId());
+                    intent.putExtra("YEAR", classesList.get(position).getYear());
                     context.startActivity(intent);
                 }
             });

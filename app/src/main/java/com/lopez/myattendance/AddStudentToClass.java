@@ -219,10 +219,14 @@ public class AddStudentToClass extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
+
+            DatabaseReference studentsSubjects = FirebaseDatabase.getInstance().getReference().child("StudentSubjects");
+
             for (ClassStudents students : list) {
                 classStudentsDr.child(students.getId()).setValue(students);
+                studentsSubjects.child(students.getStudentId()).child(classId).setValue(new StudentSubjects(classId, "", bundle.getString("YEAR")));
             }
-            //finish();
+
             return null;
         }
 

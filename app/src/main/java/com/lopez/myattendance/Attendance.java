@@ -72,7 +72,7 @@ public class Attendance extends AppCompatActivity {
         classStudentsArrayList = new ArrayList<>();
         attendanceAdapter = new AttendanceAdapter(Attendance.this, classStudentsArrayList, classId);
         classStudentsDr = FirebaseDatabase.getInstance().getReference().child("ClassStudents").child(classId);
-        attendanceDr = FirebaseDatabase.getInstance().getReference().child("Attendance").child(classId).child(getDateToday());
+        attendanceDr = FirebaseDatabase.getInstance().getReference().child("Attendance");
 
         // setting title
         attendanceTitlebar.setText(bundle.getString("SUBJECT") + " Attendance");
@@ -132,6 +132,7 @@ public class Attendance extends AppCompatActivity {
         } else if (item.getItemId() == R.id.addAttendanceStudents) {
             Intent intent = new Intent(Attendance.this, AddStudentToClass.class);
             intent.putExtra("SUBJECT", bundle.getString("SUBJECT"));
+            intent.putExtra("YEAR", bundle.getString("YEAR"));
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -174,7 +175,8 @@ public class Attendance extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             for (Attendances attendances : list) {
-                attendanceDr.child(attendances.getId()).setValue(attendances);
+                //                  STUDENT ID                  SUBJECT
+                attendanceDr.child(attendances.getStudentId()).child(classId).child(getDateToday()).setValue(attendances);
             }
             return null;
         }

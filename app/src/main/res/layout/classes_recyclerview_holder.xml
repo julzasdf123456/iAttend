@@ -49,9 +49,4 @@
             android:textAppearance="?android:textAppearanceLarge" />
 
     </RelativeLayout>
-
-
-
-
-
 </androidx.cardview.widget.CardView>
