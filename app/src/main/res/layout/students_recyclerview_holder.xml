@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/studentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:text="Test"/>
+
+            <TextView
+                android:id="@+id/studentAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="address"/>
+
+            <TextView
+                android:id="@+id/studentParentContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/studentOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"
+            android:text="&#8942;"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/greyText"/>
+
+</LinearLayout>

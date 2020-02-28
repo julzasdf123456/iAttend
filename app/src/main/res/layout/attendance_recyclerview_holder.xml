@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/checker"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_check_box_outline_blank_black_24dp"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:id="@+id/attendanceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackText"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/attendanceNameOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="16dp"
+        android:text="&#8942;"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+</RelativeLayout>
+

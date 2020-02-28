@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/newBlockName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Block Name"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textSize="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#989898"/>
+
+    <Spinner
+        android:id="@+id/newBlockCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
